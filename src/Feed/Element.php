@@ -48,6 +48,7 @@ class Element
         if ($this->cdata === true) {
             $text = '<![CDATA['.$text.']]>';
         }
+
         return $this->element.$text."</{$this->name}>";
     }
 }
