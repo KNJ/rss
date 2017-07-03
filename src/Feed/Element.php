@@ -22,7 +22,7 @@ class Element
     public function push(Element ...$elem)
     {
         foreach ($elem as $e) {
-            $this->element = $this->element . PHP_EOL . $e . PHP_EOL;
+            $this->element = $this->element.PHP_EOL.$e.PHP_EOL;
         }
     }
 
@@ -46,8 +46,8 @@ class Element
         $text = str_replace(']]>', ']]&gt;', $text);
         $text = str_replace('<![CDATA[', '&lt;![CDATA[', $text);
         if ($this->cdata === true) {
-            $text = '<![CDATA[' . $text . ']]>';
+            $text = '<![CDATA['.$text.']]>';
         }
-        return $this->element . $text . "</{$this->name}>";
+        return $this->element.$text."</{$this->name}>";
     }
 }

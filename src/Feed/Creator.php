@@ -6,14 +6,14 @@ use Closure;
 
 abstract class Creator
 {
-    static public function createElement(string $name, array $attrs = [])
+    public static function createElement(string $name, array $attrs = [])
     {
         $elem = new Element($name, $attrs);
 
         return $elem;
     }
 
-    public abstract function add(Element $elem);
+    abstract public function add(Element $elem);
 
     public function addTextElement(string $name, string $text, bool $cdata = false)
     {

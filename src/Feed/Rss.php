@@ -12,7 +12,7 @@ class Rss extends Creator
     public function __construct(array $namespaces = [])
     {
         $this->document = new Document;
-        $this->document->add(self::HEADER . PHP_EOL);
+        $this->document->add(self::HEADER.PHP_EOL);
         $this->rssElem = new Element('rss', array_merge($namespaces, ['version' => '2.0']));
         $this->channelElem = new Element('channel');
     }
@@ -28,6 +28,7 @@ class Rss extends Creator
     {
         $this->rssElem->push($this->channelElem);
         $this->document->add($this->rssElem);
+
         return $this->document;
     }
 }
