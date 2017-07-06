@@ -24,6 +24,8 @@ class Element
         foreach ($elem as $e) {
             $this->element = $this->element.PHP_EOL.$e.PHP_EOL;
         }
+
+        return $this;
     }
 
     public function addText(string $text)

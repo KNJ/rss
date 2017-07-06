@@ -37,5 +37,7 @@ abstract class Creator
         $elem = new Element($name);
         $elem = $closure($elem);
         $this->add($elem);
+
+        return $this;
     }
 }
