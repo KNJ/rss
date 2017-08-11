@@ -22,7 +22,7 @@ class Element
     public function push(Element ...$elem)
     {
         foreach ($elem as $e) {
-            $this->element = $this->element.PHP_EOL.$e.PHP_EOL;
+            $this->element = $this->element.$e;
         }
 
         return $this;
