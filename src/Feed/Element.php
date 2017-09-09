@@ -14,6 +14,7 @@ class Element
         $this->name = $name;
         $attrsStr = '';
         foreach ($attrs as $key => $val) {
+            $val = htmlspecialchars($val);
             $attrsStr .= " {$key}=\"{$val}\"";
         }
         $this->element = "<$name$attrsStr>";
