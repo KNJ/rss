@@ -32,9 +32,9 @@ abstract class Creator
         return $this;
     }
 
-    public function addElement(string $name, Closure $closure)
+    public function addElement(string $name, Closure $closure, array $attrs = [])
     {
-        $elem = new Element($name);
+        $elem = new Element($name, $attrs);
         $elem = $closure($elem);
         $this->add($elem);
 
